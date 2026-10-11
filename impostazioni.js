@@ -1,23 +1,5 @@
 /* =====================================================================
-   IMPOSTAZIONI DEL NEGOZIO  —  è l'UNICO file che devi modificare
-   =====================================================================
-
-   Qui trovi TUTTO: nome del negozio, link Instagram, modelli, prezzi,
-   colori, manici, tracolle, accessori e domande frequenti.
-
-   REGOLE D'ORO (per chi non programma):
-   1. Modifica solo il testo tra virgolette "..." e i numeri.
-   2. Non cancellare virgole, parentesi { } [ ] o virgolette.
-   3. I prezzi si scrivono con il PUNTO per i decimali: 4.50 (non 4,50).
-   4. "id" è un codice interno: usa solo lettere minuscole, numeri e
-      trattini, senza spazi (es. "rosa-cipria"). Non deve ripetersi.
-   5. I colori si scrivono in formato esadecimale, es. "#E9C2BC".
-      Puoi trovare il codice di un colore su https://htmlcolorcodes.com
-   6. Per AGGIUNGERE una voce, copia un blocco { ... }, incollalo subito
-      dopo (separato da una virgola) e cambia i valori.
-   7. Dopo ogni modifica salva il file e pubblica di nuovo il sito.
-      Se la pagina resta bianca, probabilmente manca una virgola o
-      una virgoletta: controlla l'ultima modifica.
+   IMPOSTAZIONI DEL NEGOZIO — è l'UNICO file che devi modificare
    ===================================================================== */
 
 window.IMPOSTAZIONI = {
@@ -27,27 +9,13 @@ window.IMPOSTAZIONI = {
      --------------------------------------------------------------- */
   negozio: {
     nome: "Chill",
-
-    // Il tuo logo. Metti l'immagine nella cartella  sito/img/logo/
-    // (meglio un PNG con lo sfondo trasparente) e scrivi qui il percorso.
-    // - logo: il logo completo, usato in grande in apertura e in fondo alla pagina
-    // - logoPiccolo: versione semplice per la barra in alto (qui solo la scritta "chill")
-    // Lascia "" per mostrare al suo posto il nome del negozio scritto qui sopra.
     logo: "img/logo/logo.png",
     logoPiccolo: "img/logo/logo-scritta.png",
     slogan: "Borse all'uncinetto fatte a mano, una maglia alla volta.",
     presentazione:
       "Ogni borsa nasce sulle mie mani, punto dopo punto, con filati morbidi e naturali. Scegli il modello, personalizzalo come preferisci e scrivimi su Instagram: la realizzo apposta per te.",
-
-    // >>> IMPORTANTE: scrivi qui il tuo nome utente Instagram, SENZA la @
-    // Esempio: se il profilo è instagram.com/chillandcrochet scrivi "chillandcrochet"
     instagramUtente: "crochetandchill_",
-
-    // (Facoltativo) Se vuoi usare un link diverso per il pulsante
-    // "Ordina tramite Instagram", scrivilo qui. Lascia "" per usare
-    // automaticamente la chat del profilo qui sopra (https://ig.me/m/...).
     linkOrdinePersonalizzato: "",
-
     tempiRealizzazione: "7–10 giorni lavorativi",
     notaPrezzi:
       "Prezzo indicativo calcolato in automatico. Spedizione e pagamento si concordano insieme in chat.",
@@ -55,21 +23,6 @@ window.IMPOSTAZIONI = {
 
   /* ---------------------------------------------------------------
      2) MODELLI DI BORSA
-     - prezzoBase: prezzo di partenza in euro
-     - forma: il disegno usato nell'anteprima. Valori possibili:
-         "tote"        (borsa a spalla rettangolare)
-         "secchiello"  (borsa a secchiello con coulisse)
-         "mezzaluna"   (borsa a mezzaluna)
-     - coloreIniziale: id del colore mostrato all'apertura (vedi sezione 3)
-     - fotoCatalogo: foto reale per la scheda del catalogo.
-         Metti la foto nella cartella  sito/img/borse/  e scrivi qui
-         il percorso, es. "img/borse/margherita.jpg".
-         Lascia "" per usare l'illustrazione dimostrativa.
-     - fotoColori: (facoltativo) foto reali della borsa per ogni colore.
-         A sinistra l'id del colore, a destra il percorso della foto.
-         Quando esiste una foto per il colore scelto, nell'anteprima
-         compare il pulsante "Foto reale".
-         Esempio:  fotoColori: { "rosa-cipria": "img/borse/margherita-rosa.jpg" },
      --------------------------------------------------------------- */
   modelli: [
     {
@@ -80,7 +33,7 @@ window.IMPOSTAZIONI = {
       misure: [
         { id: "standard", nome: "Unica", prezzo: 30 }
       ],
-      coloreIniziale: "panna",
+      coloreIniziale: "bianco-panna",
       fotoCatalogo: "",
       fotoColori: {},
     },
@@ -92,7 +45,7 @@ window.IMPOSTAZIONI = {
       misure: [
         { id: "standard", nome: "Unica", prezzo: 35 }
       ],
-      coloreIniziale: "rosa-cipria",
+      coloreIniziale: "rosa-chiaro",
       fotoCatalogo: "",
       fotoColori: {},
     },
@@ -104,14 +57,15 @@ window.IMPOSTAZIONI = {
       misure: [
         { id: "standard", nome: "Unica", prezzo: 30 }
       ],
-      coloreIniziale: "nocciola",
+      coloreIniziale: "beige",
       fotoCatalogo: "",
       fotoColori: {},
     },
   ],
-   
+
   /* ---------------------------------------------------------------
-/* 3) COLORI DEL FILATO */
+     3) COLORI DEL FILATO
+     --------------------------------------------------------------- */
   coloriFilato: [
     { id: "rosso", nome: "Rosso", colore: "#C81D25", prezzoExtra: 0 },
     { id: "bordeaux", nome: "Bordeaux", colore: "#6B1D2F", prezzoExtra: 0 },
@@ -142,18 +96,21 @@ window.IMPOSTAZIONI = {
   ],
 
   /* ---------------------------------------------------------------
-  
-/* 4) MANICI */
+     4) MANICI
+     --------------------------------------------------------------- */
   manici: {
     tipi: [
       { id: "nessuno", nome: "Senza manici", descrizione: "Nessun manico aggiunto", stile: null, coloreFisso: "", prezzoExtra: 0 },
       { id: "uncinetto", nome: "All'uncinetto", descrizione: "Morbidi, lavorati in tinta", stile: "uncinetto", coloreFisso: "", prezzoExtra: 5 },
     ],
+    colori: [
+      { id: "in-tinta", nome: "In tinta con la borsa", hex: "#F5F2EB" }
+    ]
   },
 
   /* ---------------------------------------------------------------
-  
-/* 5) TRACOLLE */
+     5) TRACOLLE
+     --------------------------------------------------------------- */
   tracolle: [
     { id: "nessuna", nome: "Nessuna tracolla", stile: null, colore: "", prezzoExtra: 0 },
     { id: "uncinetto", nome: "Tracolla all'uncinetto", descrizione: "In tinta con la borsa", stile: "uncinetto", colore: "filato", prezzoExtra: 5 },
@@ -162,18 +119,27 @@ window.IMPOSTAZIONI = {
   ],
 
   /* ---------------------------------------------------------------
-     6) ACCESSORI (la cliente può sceglierne più di uno)
-     - tipo: il disegno nell'anteprima. Valori possibili:
-         "fiocco", "fiore", "ciondolo", "perle", "nappina"
-     - colore: codice colore, oppure "filato" / "manici"
+     6) ACCESSORI
      --------------------------------------------------------------- */
- accessori: [
+  accessori: [
     { id: "nessuno", nome: "Nessun accessorio", prezzoExtra: 0 },
     { id: "paillettes", nome: "Applicazione paillettes", descrizione: "Punti luce ricamati a mano", prezzoExtra: 5 },
   ],
 
   /* ---------------------------------------------------------------
-     8) DOMANDE FREQUENTI (mostrate in fondo alla pagina)
+     7) CHIUSURE E FODERE
+     --------------------------------------------------------------- */
+  chiusure: [
+    { id: "nessuna", nome: "Senza chiusura", prezzoExtra: 0 },
+    { id: "bottone-magnetico", nome: "Bottone magnetico", prezzoExtra: 0 }
+  ],
+  fodere: [
+    { id: "nessuna", nome: "Senza fodera", prezzoExtra: 0 },
+    { id: "standard", nome: "Fodera in tessuto", prezzoExtra: 0 }
+  ],
+
+  /* ---------------------------------------------------------------
+     8) DOMANDE FREQUENTI
      --------------------------------------------------------------- */
   domande: [
     {
