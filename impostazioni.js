@@ -41,7 +41,7 @@ window.IMPOSTAZIONI = {
 
     // >>> IMPORTANTE: scrivi qui il tuo nome utente Instagram, SENZA la @
     // Esempio: se il profilo è instagram.com/chillandcrochet scrivi "chillandcrochet"
-    instagramUtente: "iltuoprofilo",
+    instagramUtente: "crochetandchill_",
 
     // (Facoltativo) Se vuoi usare un link diverso per il pulsante
     // "Ordina tramite Instagram", scrivilo qui. Lascia "" per usare
