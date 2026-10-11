@@ -35,20 +35,20 @@ window.IMPOSTAZIONI = {
     // Lascia "" per mostrare al suo posto il nome del negozio scritto qui sopra.
     logo: "img/logo/logo.png",
     logoPiccolo: "img/logo/logo-scritta.png",
-    slogan: "Borse all'uncinetto fatte a mano, una maglia alla volta.",
+    slogan: "Borse all'uncinetto fatte a mano.",
     presentazione:
-      "Ogni borsa nasce sulle mie mani, punto dopo punto, con filati morbidi e naturali. Scegli il modello, personalizzalo come preferisci e scrivimi su Instagram: la realizzo apposta per te.",
+      "Ogni borsa nasce dalle mie mani, punto dopo punto. Scegli il modello, personalizzalo come preferisci e scrivimi su Instagram: la realizzo apposta per te.",
 
     // >>> IMPORTANTE: scrivi qui il tuo nome utente Instagram, SENZA la @
     // Esempio: se il profilo è instagram.com/chillandcrochet scrivi "chillandcrochet"
-    instagramUtente: "iltuoprofilo",
+    instagramUtente: "crochetandchill_",
 
     // (Facoltativo) Se vuoi usare un link diverso per il pulsante
     // "Ordina tramite Instagram", scrivilo qui. Lascia "" per usare
     // automaticamente la chat del profilo qui sopra (https://ig.me/m/...).
     linkOrdinePersonalizzato: "",
 
-    tempiRealizzazione: "7–10 giorni lavorativi",
+    tempiRealizzazione: "3-5 giorni lavorativi",
     notaPrezzi:
       "Prezzo indicativo calcolato in automatico. Spedizione e pagamento si concordano insieme in chat.",
   },
@@ -57,9 +57,9 @@ window.IMPOSTAZIONI = {
      2) MODELLI DI BORSA
      - prezzoBase: prezzo di partenza in euro
      - forma: il disegno usato nell'anteprima. Valori possibili:
-         "tote"        (borsa a spalla rettangolare)
-         "secchiello"  (borsa a secchiello con coulisse)
-         "mezzaluna"   (borsa a mezzaluna)
+         "clutch bag"        (borsa a mano)
+         "bottega bag"  (borsa a secchiello)
+         "hand bag"   (borsa a mano)
      - coloreIniziale: id del colore mostrato all'apertura (vedi sezione 3)
      - fotoCatalogo: foto reale per la scheda del catalogo.
          Metti la foto nella cartella  sito/img/borse/  e scrivi qui
@@ -73,40 +73,28 @@ window.IMPOSTAZIONI = {
      --------------------------------------------------------------- */
   modelli: [
     {
-      id: "margherita",
-      nome: "Tote Margherita",
-      tipologia: "Borsa a spalla",
-      descrizione:
-        "Capiente e leggera, perfetta per tutti i giorni. Lavorata a punto basso fitto per una trama morbida ma resistente.",
-      dimensioni: "35 × 30 cm",
-      prezzoBase: 55,
-      forma: "tote",
+      id: "clutch bag",
+      nome: "Clutch bag",
+      tipologia: "Borsa a mano",
+      prezzoBase: 30,
       coloreIniziale: "panna",
       fotoCatalogo: "",
       fotoColori: {},
     },
     {
-      id: "lavanda",
-      nome: "Secchiello Lavanda",
+      id: "bottega bag",
+      nome: "Bottega Bag",
       tipologia: "Borsa a secchiello",
-      descrizione:
-        "Forma morbida con coulisse e pompon, ideale per il weekend. Si chiude con un gesto e porta con sé un tocco romantico.",
-      dimensioni: "24 × 26 cm",
-      prezzoBase: 48,
-      forma: "secchiello",
+      prezzoBase: 35,
       coloreIniziale: "rosa-cipria",
       fotoCatalogo: "",
       fotoColori: {},
     },
     {
-      id: "luna",
-      nome: "Mezzaluna Luna",
+      id: "hand bag",
+      nome: "Hand Bag",
       tipologia: "Borsa a mano",
-      descrizione:
-        "Piccola ed elegante, a forma di mezzaluna. Pensata per le occasioni speciali e per le serate d'estate.",
-      dimensioni: "30 × 18 cm",
-      prezzoBase: 42,
-      forma: "mezzaluna",
+      prezzoBase: 30,
       coloreIniziale: "nocciola",
       fotoCatalogo: "",
       fotoColori: {},
@@ -134,7 +122,7 @@ window.IMPOSTAZIONI = {
      4) MANICI
      tipi:
      - stile: il disegno nell'anteprima. Valori possibili:
-         "uncinetto", "ecopelle", "bambu", "perline"
+         "uncinetto", "bigiotteria"
      - coloreFisso: se il manico ha un colore unico (es. bambù naturale)
          scrivi qui il colore: la scelta del colore verrà nascosta.
          Lascia "" se la cliente può scegliere il colore.
@@ -143,32 +131,21 @@ window.IMPOSTAZIONI = {
      --------------------------------------------------------------- */
   manici: {
     tipi: [
-      { id: "uncinetto", nome: "All'uncinetto", descrizione: "Morbidi, lavorati in tinta", stile: "uncinetto", coloreFisso: "", prezzoExtra: 0 },
-      { id: "ecopelle", nome: "In ecopelle", descrizione: "Lisci e resistenti", stile: "ecopelle", coloreFisso: "", prezzoExtra: 6 },
-      { id: "bambu", nome: "In bambù", descrizione: "Rigidi, color naturale", stile: "bambu", coloreFisso: "#C9A774", prezzoExtra: 8 },
-      { id: "perline", nome: "Di perline", descrizione: "Perline in legno infilate a mano", stile: "perline", coloreFisso: "", prezzoExtra: 9 },
-    ],
-    colori: [
-      { id: "come-filato", nome: "Come il filato", colore: "", prezzoExtra: 0 },
-      { id: "panna", nome: "Panna", colore: "#F1E6D6", prezzoExtra: 0 },
-      { id: "cuoio", nome: "Cuoio", colore: "#A9744F", prezzoExtra: 0 },
-      { id: "marrone", nome: "Marrone", colore: "#6E5444", prezzoExtra: 0 },
-      { id: "rosa", nome: "Rosa antico", colore: "#D49C95", prezzoExtra: 0 },
-      { id: "nero", nome: "Nero", colore: "#3B3330", prezzoExtra: 0 },
+      { id: "uncinetto", nome: "All'uncinetto", descrizione: "Morbidi, lavorati in tinta", stile: "uncinetto", coloreFisso: "", prezzoExtra: 5 },
     ],
   },
 
   /* ---------------------------------------------------------------
      5) TRACOLLE
-     - stile: "uncinetto", "ecopelle", "catena" (lascia null per "nessuna")
+     - stile: "uncinetto", "catena" (lascia null per "nessuna")
      - colore: "filato" = come il filato, "manici" = come i manici,
                oppure un codice colore, es. "#C9A45C"
      --------------------------------------------------------------- */
   tracolle: [
     { id: "nessuna", nome: "Nessuna tracolla", stile: null, colore: "", prezzoExtra: 0 },
-    { id: "uncinetto", nome: "Tracolla all'uncinetto", descrizione: "In tinta con la borsa", stile: "uncinetto", colore: "filato", prezzoExtra: 8 },
-    { id: "ecopelle", nome: "Tracolla in ecopelle", descrizione: "Abbinata ai manici, regolabile", stile: "ecopelle", colore: "manici", prezzoExtra: 10 },
-    { id: "catena", nome: "Catenella dorata", descrizione: "Rimovibile, con moschettoni", stile: "catena", colore: "#C9A45C", prezzoExtra: 12 },
+    { id: "uncinetto", nome: "Tracolla all'uncinetto", descrizione: "In tinta con la borsa", stile: "uncinetto", colore: "filato", prezzoExtra: 5 },
+    { id: "catena", nome: "Catenella oro", descrizione: "Rimovibile, con moschettoni", stile: "catena", colore: "#C9A45C", prezzoExtra: 5 },
+    { id: "catena", nome: "Catenella argento", descrizione: "Rimovibile, con moschettoni", stile: "catena", colore: "", prezzoExtra: 5 },
   ],
 
   /* ---------------------------------------------------------------
