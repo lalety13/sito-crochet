@@ -170,6 +170,8 @@
 
   /* ---------- Apertura: tre borse illustrate ---------- */
   function disegnaApertura() {
+  const contenitoreApertura = $('#apertura-borse');
+    if (!contenitoreApertura) return; // Se non trova l'elemento, esce senza dare errore
     const esempi = [
       { modello: S.modelli[1], filato: 'salvia', tipo: 'perline', col: 'panna', acc: ['fiore'] },
       { modello: S.modelli[0], filato: 'rosa-cipria', tipo: 'ecopelle', col: 'cuoio', acc: ['fiocco', 'ciondolo'] },
