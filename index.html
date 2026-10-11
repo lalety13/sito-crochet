@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Chill — Borse all'uncinetto fatte a mano</title>
+  <meta name="description" content="Borse all'uncinetto fatte a mano. Personalizza colore, manici, tracolla e accessori, guarda l'anteprima e ordina su Instagram.">
+  <meta name="theme-color" content="#FBF6EE">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="salta" href="#catalogo">Vai al catalogo</a>
+
+  <header class="testata">
+    <div class="contenitore testata__riga">
+      <a href="#inizio" class="logo" data-logo="piccolo"><span data-brand>Chill</span></a>
+      <nav class="menu" aria-label="Menu principale">
+        <a href="#catalogo">Modelli</a>
+        <a href="#configuratore">Personalizza</a>
+        <a href="#come-ordinare">Come ordinare</a>
+        <a href="#domande">Domande</a>
+      </nav>
+      <a class="pulsante pulsante--piccolo pulsante--contorno" data-ig-profilo href="[https://www.instagram.com/crochetandchill_/](https://www.instagram.com/crochetandchill_/)" target="_blank" rel="noopener">
+        <svg class="icona" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="pieno"/></svg>
+        <span>Instagram</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="inizio">
+    <!-- APERTURA -->
+    <section class="apertura">
+      <div class="contenitore apertura__griglia">
+        <div class="apertura__testo rivela">
+          <p class="occhiello">Fatto a mano all'uncinetto</p>
+          <h1 class="apertura__logo" data-logo="grande"><span data-brand>Chill</span></h1>
+          <p class="apertura__slogan" data-slogan></p>
+          <p class="apertura__intro" data-presentazione></p>
+          <div class="apertura__azioni">
+            <a href="#configuratore" class="pulsante pulsante--pieno">Crea la tua borsa</a>
+            <a href="#catalogo" class="pulsante pulsante--contorno">Scopri i modelli</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGO -->
+    <section id="catalogo" class="sezione">
+      <div class="contenitore">
+        <header class="sezione__intestazione rivela">
+          <p class="occhiello">Il catalogo</p>
+          <h2>Scegli il tuo modello</h2>
+          <p>Ogni borsa è realizzata su ordinazione: parti da un modello e rendilo tuo.</p>
+        </header>
+        <div class="griglia-modelli" id="griglia-modelli"></div>
+      </div>
+    </section>
+
+    <!-- CONFIGURATORE -->
+    <section id="configuratore" class="sezione sezione--configuratore">
+      <div class="contenitore">
+        <header class="sezione__intestazione rivela">
+          <p class="occhiello">Il configuratore</p>
+          <h2>Personalizza la tua borsa</h2>
+          <p>Ogni scelta aggiorna subito l'anteprima e il prezzo.</p>
+        </header>
+
+        <div class="config">
+          <div class="config__lato">
+            <div class="anteprima">
+              <div class="anteprima__barra">
+                <span class="etichetta-demo" id="etichetta-vista">Anteprima illustrata</span>
+                <div class="vista" id="scelta-vista" role="group" aria-label="Tipo di anteprima" hidden>
+                  <button type="button" class="vista__pulsante" data-vista="illustrazione" aria-pressed="true">Illustrazione</button>
+                  <button type="button" class="vista__pulsante" data-vista="foto" aria-pressed="false">Foto reale</button>
+                </div>
+              </div>
+              <div class="anteprima__tela" id="anteprima"></div>
+              <p class="anteprima__nome" id="anteprima-nome"></p>
+              <p class="anteprima__didascalia" id="didascalia"></p>
+            </div>
+
+            <div class="conto" aria-live="polite">
+              <h3 class="conto__titolo">Il tuo prezzo</h3>
+              <ul class="conto__righe" id="conto-righe"></ul>
+              <div class="conto__totale">
+                <span>Totale</span>
+                <strong id="conto-totale">—</strong>
+              </div>
+              <p class="conto__nota" data-nota-prezzi></p>
+            </div>
+          </div>
+
+          <div class="config__principale">
+            <form class="opzioni" id="form-config" novalidate>
+              <!-- I gruppi di opzioni vengono creati automaticamente da impostazioni.js -->
+            </form>
+
+            <section class="riepilogo" id="riepilogo" aria-labelledby="riepilogo-titolo">
+              <h3 id="riepilogo-titolo">Il tuo riepilogo</h3>
+              <ul class="riepilogo__lista" id="riepilogo-lista"></ul>
+              <div class="riepilogo__totale"><span>Totale</span><strong id="riepilogo-totale"></strong></div>
+
+              <label class="riepilogo__etichetta" for="riepilogo-testo">Messaggio da inviare su Instagram</label>
+              <textarea id="riepilogo-testo" class="riepilogo__testo" rows="9" readonly></textarea>
+
+              <div class="riepilogo__azioni">
+                <a class="pulsante pulsante--pieno pulsante--largo" id="pulsante-ordina" href="#" target="_blank" rel="noopener">
+                  <svg class="icona" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="pieno"/></svg>
+                  Ordina tramite Instagram
+                </a>
+                <button type="button" class="pulsante pulsante--contorno" id="pulsante-copia">Copia riepilogo</button>
+                <button type="button" class="pulsante pulsante--contorno" id="pulsante-condividi" hidden>Condividi…</button>
+                <button type="button" class="pulsante pulsante--testo" id="pulsante-ricomincia">Ricomincia</button>
+              </div>
+              <p class="riepilogo__aiuto">
+                <strong>Come funziona:</strong> premendo «Ordina tramite Instagram» il riepilogo viene <strong>copiato automaticamente</strong>
+                e si apre la chat Instagram: ti basta <strong>incollarlo</strong> nel messaggio e inviarlo.
+                Instagram non permette ai siti di scrivere il messaggio al posto tuo, per questo usiamo la copia.
+                Da smartphone puoi anche usare «Condividi…» e scegliere Instagram.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COME ORDINARE -->
+    <section id="come-ordinare" class="sezione sezione--chiara">
+      <div class="contenitore">
+        <header class="sezione__intestazione rivela">
+          <p class="occhiello">Semplice e senza registrazione</p>
+          <h2>Come ordinare</h2>
+        </header>
+        <ol class="passi">
+          <li class="passo rivela"><span class="passo__numero">1</span><h3>Scegli</h3><p>Sfoglia il catalogo e scegli il modello che ti piace di più.</p></li>
+          <li class="passo rivela"><span class="passo__numero">2</span><h3>Personalizza</h3><p>Colore, manici, tracolla e dettagli: l'anteprima e il prezzo si aggiornano subito.</p></li>
+          <li class="passo rivela"><span class="passo__numero">3</span><h3>Scrivimi</h3><p>Invia il riepilogo su Instagram: concordiamo insieme spedizione e pagamento.</p></li>
+        </ol>
+        <p class="passi__tempi rivela">Tempi di realizzazione: <strong data-tempi></strong></p>
+      </div>
+    </section>
+
+    <!-- DOMANDE -->
+    <section id="domande" class="sezione">
+      <div class="contenitore contenitore--stretto">
+        <header class="sezione__intestazione rivela">
+          <p class="occhiello">Domande frequenti</p>
+          <h2>Hai qualche dubbio?</h2>
+        </header>
+        <div class="domande" id="lista-domande"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="piede">
+    <div class="contenitore piede__riga">
+      <p class="logo logo--piede" data-logo="grande"><span data-brand>Chill</span></p>
+      <p>Borse all'uncinetto fatte a mano · <a data-ig-profilo href="[https://www.instagram.com/crochetandchill_/](https://www.instagram.com/crochetandchill_/)" target="_blank" rel="noopener">Seguimi su Instagram</a></p>
+      <p class="piede__nota">Le immagini del sito sono illustrazioni dimostrative: ogni borsa reale è unica e fatta a mano.</p>
+    </div>
+  </footer>
+
+  <!-- Barra del totale su smartphone -->
+  <div class="barra-mobile" id="barra-mobile" aria-hidden="true">
+    <div class="barra-mobile__prezzo"><span>Totale</span><strong id="barra-totale"></strong></div>
+    <a href="#riepilogo" class="pulsante pulsante--pieno pulsante--piccolo" tabindex="-1">Riepilogo e ordine</a>
+  </div>
+
+  <div class="avviso" id="avviso" role="status" aria-live="polite"></div>
+
+  <script src="impostazioni.js"></script>
+  <script src="assets/disegno.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
